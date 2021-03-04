@@ -17,3 +17,15 @@ http://localhost:3000/about
 ## Blog Url
 
 http://localhost:3000/blog
+
+## Contact Url with Typescript
+
+touch tsconfig.json
+
+npm install --save-dev typescript @types/react @types/node
+
+http://localhost:3000/contact
+
+## Deploy
+
+npm run build
