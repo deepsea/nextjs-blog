@@ -8,11 +8,13 @@ interface Props {
     }
 }
 
-function Contact({contactDetails}: Props) {
+function Contact({ contactDetails: {name, number, address}}: Props) {
     return (
         <div>
             <h1>The contact ME page</h1>
-            <h2>My name is {contactDetails.name}</h2>
+            <h2>My name is {name}</h2>
+            <h3>My number is {number}</h3>
+            <h3>My address is {address}</h3>
         </div>
     )
 }
