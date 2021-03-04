@@ -1,6 +1,5 @@
-import Layout from '../components/layout';
 import Link from 'next/link';
-import { Router, useRouter } from 'next/router';
+import { Router, useRouter } from 'next/router';  
 
 function BlogPage({ posts }) {
     const router = useRouter();
@@ -8,28 +7,26 @@ function BlogPage({ posts }) {
         return <h2>Loading...</h2>;
     }
     return (
-        <Layout>
-            <div>
-                <h1>I am a blog</h1>
+        <div>
+            <h1>I am a blog</h1>
 
-                {/* Router Example 1 */}
-                {/* <Link href="/about">
+            {/* Router Example 1 */}
+            {/* <Link href="/about">
                 <a>Click to go to the about page</a>
             </Link> */}
 
-                {/* Router Example 2 */}
-                <button onClick={() => router.push('/about')}>
-                    Click to go to the about page
-                </button>
+            {/* Router Example 2 */}
+            <button onClick={() => router.push('/about')}>
+                Click to go to the about page
+            </button>
 
-                {posts.map((post) => (
-                    <div key={post.id}>
-                        <h2>{post.title}</h2>
-                        <h3>By {post.author}</h3>
-                    </div>
-                ))}
-            </div>
-        </Layout>
+            {posts.map((post) => (
+                <div key={post.id}>
+                    <h2>{post.title}</h2>
+                    <h3>By {post.author}</h3>
+                </div>
+            ))}
+        </div>
     );
 }
 
