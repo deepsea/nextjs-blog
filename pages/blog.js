@@ -16,8 +16,10 @@ function blog({ posts }) {
             {/* <Link href="/about">
                 <a>Click to go to the about page</a>
             </Link> */}
+
             {/* Router Example 2 */}
             <button onClick={() => router.push("/about")}>Click to go to the about page</button>
+        
         {posts.map((post) => (
           <div key={post.id}>
             <h2>{post.title}</h2>
@@ -29,9 +31,6 @@ function blog({ posts }) {
   );
 }
 
-
-export async function getStaticProps() {
-    
     // function timeout(ms) {
     // }
     //     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -58,27 +57,30 @@ export async function getStaticProps() {
 
     // await sleep(3000, apolloClient.)
 
-    const res = {
-        data: [
-            {
-                id: '123',
-                title: 'My first blog',
-                author: 'Sonny'
-            },
-            {
-                id: '456',
-                title: 'Gems first blog',
-                author: 'Gwen'
-            }
-    }
-        ]
-    const posts = res.data
 
-  return {
-    props: {
-      posts,
-    },
-  };
-}
+    export async function getStaticProps() {
+        const res = {
+            data: [
+                {
+                    id: '123',
+                    title: 'My first blog',
+                    author: 'Sonny'
+                },
+                {
+                    id: '456',
+                    title: 'Gems first blog',
+                    author: 'Gwen'
+                }
+            ]
+        }
+        const posts = res.data
+    
+        return {
+            props: {
+                posts,
+    
+            }
+        }
+    }
 
 export default blog
