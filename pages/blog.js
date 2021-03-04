@@ -2,7 +2,7 @@ import Layout from '../components/layout';
 import Link from 'next/link';
 import { Router, useRouter } from 'next/router';
 
-function blog({ posts }) {
+function BlogPage({ posts }) {
     const router = useRouter();
     if (router.isFallback) {
         return <h2>Loading...</h2>;
@@ -64,16 +64,17 @@ export async function getStaticProps() {
         data: [
             {
                 id: '123',
-                title: 'My first blog',
+                title: 'My first blog post',
                 author: 'Sonny',
             },
             {
                 id: '456',
-                title: 'Gems first blog',
+                title: "Gwen's first blog post",
                 author: 'Gwen',
             },
         ],
     };
+
     const posts = res.data;
 
     return {
@@ -83,4 +84,4 @@ export async function getStaticProps() {
     };
 }
 
-export default blog;
+export default BlogPage;

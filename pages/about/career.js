@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function career() {
+function CareerPage() {
     return (
         <div>
             <h1>Career</h1>
-            
         </div>
-    )
+    );
 }
 
-export default career
+export default CareerPage;

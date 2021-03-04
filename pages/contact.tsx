@@ -8,7 +8,7 @@ interface Props {
     };
 }
 
-function Contact({ contactDetails: { name, number, address } }: Props) {
+function ContactPage({ contactDetails: { name, number, address } }: Props) {
     return (
         <div>
             <h1>The contact ME page</h1>
@@ -33,4 +33,4 @@ export async function getStaticProps() {
     };
 }
 
-export default Contact;
+export default ContactPage;

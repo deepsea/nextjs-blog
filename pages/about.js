@@ -1,6 +1,6 @@
 import React from 'react';
 
-function about({ profile }) {
+function AboutPage({ profile }) {
     return (
         <div>
             <h1>This is {profile.name}'s' profile page</h1>
@@ -43,4 +43,4 @@ export async function getServerSideProps() {
     };
 }
 
-export default about;
+export default AboutPage;
