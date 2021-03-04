@@ -29,3 +29,9 @@ http://localhost:3000/contact
 ## Deploy
 
 npm run build
+
+## Lighthouse result
+
+<p align="left">
+  <img src="lighthouse.png">
+</p>
