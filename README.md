@@ -35,3 +35,13 @@ npm run build
 <p align="left">
   <img src="lighthouse.png">
 </p>
+
+## Custom App
+
+`_app and _document are special global files for persistent layout over all pages`
+
+https://nextjs.org/docs/advanced-features/custom-app
+
+`_document is used to add some tags for accessibility for example like the lang="en" or meta data`
+
+https://nextjs.org/docs/advanced-features/custom-document
