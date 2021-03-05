@@ -1,10 +1,10 @@
-import React from 'react';
+import Header from '../components/Header'
 
 export default function Page({ children }) {
     return (
-        <div>
-            <h2>I am the page component</h2>
+        <div className="container mx-auto px-4">
+            <Header />
             {children}
         </div>
-    );
+    )
 }
